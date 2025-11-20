@@ -162,11 +162,5 @@ Feel free to fork this repo, create a branch, and submit PRs. Suggestions are we
 
 MIT License — free to use and modify.
 
----
 
-If you want, I can also generate:
 
-✅ A **logo** for your ERP
-✅ Screenshots layout section
-✅ A **professional GitHub banner**
-Just tell me!
