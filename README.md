@@ -1,7 +1,5 @@
 # react-erp-system
 A modern ERP dashboard built with React, Tailwind CSS, and Lucide icons. Includes products, customers, sales, and authentication modules.  Fully responsive ERP management system UI built using React + Tailwind CSS. 
-Here is a clean, professional **README.md** you can copy directly into your repo 👇
-(Structured, neat, and suitable for GitHub.)
 
 ---
 
@@ -85,9 +83,7 @@ src/
 │   └── AuthContext.jsx
 │
 └── assets/
-```
 
-*(Your structure may vary depending on how you organize components.)*
 
 ---
 
