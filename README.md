@@ -1,129 +1,151 @@
-# react-erp-system
-A modern ERP dashboard built with React, Tailwind CSS, and Lucide icons. Includes products, customers, sales, and authentication modules.  Fully responsive ERP management system UI built using React + Tailwind CSS. 
+
+
+# 📦 ERP System – React + Tailwind CSS
+
+A modern and responsive ERP (Enterprise Resource Planning) Dashboard built using **React**, **Vite**, **Tailwind CSS**, and **Lucide Icons**.
+This project includes authentication, product CRUD, customer directory, sales orders, and a clean dashboard UI.
 
 ---
 
-# **ERP Dashboard – React + Tailwind CSS**
+## 📸 Screenshots
 
-A modern, responsive ERP (Enterprise Resource Planning) dashboard built using **React**, **Tailwind CSS**, and **Lucide Icons**.
-Includes modules for **authentication**, **products (CRUD)**, **customers**, **sales orders**, and a dynamic dashboard.
+
+### 🔐 Login Page
+
+![Login](screenshots/login.png)
+
+### 📊 Dashboard
+
+![Dashboard](screenshots/dashboard.png)
+
+### 📦 Products Module
+
+![Products](screenshots/products.png)
+
+### 🧾 Sample View (Invoices / Errors / UI)
+
+![View](screenshots/view.png)
 
 ---
 
-## 🚀 **Features**
+## 🚀 Features
 
-### ✅ **Authentication System**
+### ✔ Authentication
 
-* Login & Register UI
-* User context with token-based mock authentication
-* Role-based display (admin, sales, inventory, purchase)
+* Login & Register screens
+* Mock token-based login
+* Context API for state management
 
-### 📦 **Products Module**
+### ✔ Dashboard
 
-* Add, Edit, Delete products
-* Search bar
-* Reorder level highlight (low stock in red)
-* Modal form for product entry
-* Toast notifications for actions
-
-### 🧑‍🤝‍🧑 **Customers Module**
-
-* Customer listing
-* Editable structure for future CRUD
-* Responsive table UI
-
-### 🛒 **Sales Orders**
-
-* Order listing with status badges
-* View and download placeholders
-* Clean, modern card + table layout
-
-### 📊 **Dashboard**
-
-* Total products, customers, orders, revenue
+* Analytics cards
 * Recent sales
 * Low stock alerts
 
-### 🎨 **UI & Styling**
+### ✔ Products Module (Full CRUD)
 
-* Tailwind CSS for fast and clean UI
-* Fully responsive (mobile → desktop)
-* Modern sidebar + topbar layout
-* Lucide icons everywhere for a sharp UI
+* Add, Edit, Delete products
+* Modal form interface
+* Search functionality
+* Reorder-level warnings
+* Toast notifications
+
+### ✔ Customers Module
+
+* Customer table
+* Ready for CRUD expansion
+
+### ✔ Sales Orders
+
+* Orders listing
+* Status badges
+* View & download buttons
+
+### ✔ UI & Experience
+
+* Responsive layout
+* Sidebar navigation
+* Mobile-friendly
+* Clean Tailwind design
+* Lucide icon set
 
 ---
 
-## 🛠️ **Tech Stack**
+## 🛠 Tech Stack
 
-| Technology             | Purpose                           |
-| ---------------------- | --------------------------------- |
-| **React**              | Component-based UI                |
-| **Tailwind CSS**       | Styling                           |
-| **Lucide Icons**       | Vector icons                      |
-| **Context API**        | Authentication & state management |
-| **Vite** (recommended) | Fast bundler/dev server           |
+| Technology   | Purpose                  |
+| ------------ | ------------------------ |
+| React        | Component UI             |
+| Vite         | Development & build tool |
+| Tailwind CSS | Styling                  |
+| Lucide Icons | Icon system              |
+| Context API  | Authentication state     |
 
 ---
 
-## 📂 **Folder Structure**
+## 📂 Folder Structure
 
 ```
-src/
-│ App.jsx
-│ index.css
-│ main.jsx
+erp-app/
+│ index.html
+│ vite.config.js
+│ tailwind.config.js
+│ postcss.config.js
+│ package.json
 │
-├── components/
-│   ├── Toast.jsx
-│   ├── LoginPage.jsx
-│   ├── Dashboard.jsx
-│   ├── ProductsPage.jsx
-│   ├── CustomersPage.jsx
-│   ├── SalesOrdersPage.jsx
-│   └── AuthContext.jsx
-│
-└── assets/
+└───src/
+    │ App.jsx
+    │ main.jsx
+    │ index.css
+    │
+    ├── assets/
+    └── components/ (optional future structuring)
 ```
 
 ---
 
-## 📦 **Installation**
+## 📥 Installation & Setup
 
-### 1️⃣ Clone the repository
+Clone the repo:
 
 ```sh
-git clone https://github.com/<your-username>/<your-repo-name>.git
-cd <your-repo-name>
+git clone https://github.com/me-anuragg/react-erp-system.git
+cd react-erp-system
 ```
 
-### 2️⃣ Install dependencies
+Install dependencies:
 
 ```sh
 npm install
 ```
 
-### 3️⃣ Start the development server
+Run the dev server:
 
 ```sh
 npm run dev
 ```
 
+Open:
+
+```
+http://localhost:5173
+```
+
 ---
 
-## ⚙️ **Tailwind Setup (if not already installed)**
+## 🎨 Tailwind CSS Setup
 
-```sh
-npm install -D tailwindcss postcss autoprefixer
-npx tailwindcss init -p
-```
-
-Add this to **tailwind.config.js**:
+Ensure your `tailwind.config.js` contains:
 
 ```js
-content: ["./index.html", "./src/**/*.{js,jsx}"],
+export default {
+  content: ["./index.html", "./src/**/*.{js,jsx}"],
+  theme: { extend: {} },
+  plugins: [],
+};
 ```
 
-Add to **src/index.css**:
+And your `src/index.css` contains:
 
 ```css
 @tailwind base;
@@ -135,32 +157,33 @@ Add to **src/index.css**:
 
 ## 🔒 Authentication Note
 
-This project currently uses **mock login tokens** for demonstration.
-For real-world usage, replace with a backend API (Node, Django, Laravel, etc.).
+The system currently uses a **mock login token** for demonstration.
+You can easily replace this with a real backend later (Node.js, Django, Firebase, etc.)
 
 ---
 
-## 📈 Future Enhancements
+## 📈 Future Improvements
 
-* Real API integration
-* Role-based module access
-* Purchase module
+* Backend API integration
+* Role-based permissions
 * Invoices module
-* Charts & analytics
-* Pagination
-* Search across all modules
+* Chart visualizations
+* Pagination & filters
+* Better responsive sidebar
 
 ---
 
 ## 🤝 Contributing
 
-Feel free to fork this repo, create a branch, and submit PRs. Suggestions are welcome!
+Pull requests and suggestions are welcome.
+Fork the project → create a branch → submit PR.
 
 ---
 
 ## 📄 License
 
-MIT License — free to use and modify.
+MIT License – free to use & modify.
 
+---
 
 
